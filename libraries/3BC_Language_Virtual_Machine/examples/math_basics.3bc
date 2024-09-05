@@ -1,0 +1,107 @@
+#!/usr/bin/env 3bc
+###########################################
+# examples comparing with python with 3bc #
+###########################################
+
+# a, b = 5, 2
+# c = a + b; print('a + b =', c)
+# c = a - b; print('a - b =', c)
+# c = a * b; print('a * b =', c)
+# c = a / b; print('a / b =', c)
+
+# equivalent to alocate variables (a, b)
+MODE    NILL    0x06    # MODE_MEM
+ALOC    'a'     5
+ALOC    'b'     2
+
+###########################################
+# equivalent to print (f'a, b = {a}, {b}')
+MODE    NILL    0x02    # MODE_STRING
+STRC    NILL    'a'
+STRC    NILL    ','
+STRC    NILL    'b'
+STRC    NILL    '='
+STRI    'a'     NILL
+STRC    NILL    ','
+STRI    'b'     NILL
+STRC    NILL    0xA
+
+###########################################
+# equivalent to sum (a + b)
+MODE    NILL    0x08    # MODE_MEM_AUX
+PUSH    'a'     NILL
+
+MODE    NILL    0x0b    # MODE_MATH_SUM
+MATH    'b'     NILL
+
+MODE    NILL    0x08    # MODE_MEM_AUX
+PULL    'c'     NILL
+
+# equivalent to print('a + b =', c)
+MODE    NILL    0x02    # MODE_STRING
+STRC    NILL    'a'
+STRC    NILL    '+'
+STRC    NILL    'b'
+STRC    NILL    '='
+STRI    'c'     NILL
+STRC    NILL    0xA
+
+###########################################
+# equivalent to sub (a - b)
+MODE    NILL    0x08    # MODE_MEM_AUX
+PUSH    'a'     NILL
+
+MODE    NILL    0x0c    # MODE_MATH_SUB
+MATH    'b'     NILL
+
+MODE    NILL    0x08    # MODE_MEM_AUX
+PULL    'c'     NILL
+
+# equivalent to print('a - b =', c)
+MODE    NILL    0x02    # MODE_STRING
+STRC    NILL    'a'
+STRC    NILL    '-'
+STRC    NILL    'b'
+STRC    NILL    '='
+STRI    'c'     NILL
+STRC    NILL    0xA
+
+###########################################
+# equivalent to sum (a * b)
+MODE    NILL    0x08    # MODE_MEM_AUX
+PUSH    'a'     NILL
+
+MODE    NILL    0x0d    # MODE_MATH_MUL
+MATH    'b'     NILL
+
+MODE    NILL    0x08    # MODE_MEM_AUX
+PULL    'c'     NILL
+
+# equivalent to print('a * b =', c)
+MODE    NILL    0x02    # MODE_STRING
+STRC    NILL    'a'
+STRC    NILL    '*'
+STRC    NILL    'b'
+STRC    NILL    '='
+STRI    'c'     NILL
+STRC    NILL    0xA
+
+###########################################
+# equivalent to sub (a / b)
+MODE    NILL    0x08    # MODE_MEM_AUX
+PUSH    'a'     NILL
+
+MODE    NILL    0x0e    # MODE_MATH_DIV
+MATH    'b'     NILL
+
+MODE    NILL    0x08    # MODE_MEM_AUX
+PULL    'c'     NILL
+
+# equivalent to print('a / b =', c)
+MODE    NILL    0x02    # MODE_STRING
+STRC    NILL    'a'
+STRC    NILL    '/'
+STRC    NILL    'b'
+STRC    NILL    '='
+STRI    'c'     NILL
+STRC    NILL    0xA

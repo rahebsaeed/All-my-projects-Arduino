@@ -1,0 +1,22 @@
+#!/usr/bin/env 3bc
+MODE 0 6
+ALOC 'i' 3
+
+MODE 0 0d02
+NILL 0 0x1
+STRC 0 'H'
+STRC 0 'I'
+STRC 0 '!'
+STRC 0 0xA
+
+MODE 0 0d08
+PUSH 'i' 0
+
+MODE 0 0d12
+MATH 0 1
+
+MODE 0 0d08
+PULL 'i' 0
+
+MODE 0 9
+FGTO 0 0x1

@@ -1,0 +1,13 @@
+#!/usr/bin/env 3bc
+MODE	NILL	0d06
+ALOC	:a1	    0d07
+ALOC	:a2	    0d00
+ALOC	:p1 	:a1
+ALOC	:p2	    :a2
+
+MODE	NILL	0d07
+PUSH	:p1	    NILL
+PULL	:p2	    NILL
+
+MODE	NILL	0d02
+STRI	:a2	    NILL

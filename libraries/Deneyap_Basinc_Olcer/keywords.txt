@@ -1,0 +1,30 @@
+#######################################
+# Syntax Coloring Map For	Deneyap_BasincOlcer
+#######################################
+
+#######################################
+# Library (KEYWORD1)
+#######################################
+
+Deneyap_BasincOlcer	KEYWORD1 
+
+####################################
+# Class (KEYWORD1)
+####################################
+
+AtmosphericPressure	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+begin	KEYWORD2
+getTemp	KEYWORD2	
+getPressure	KEYWORD2
+getTempAndPressure	KEYWORD2
+isOK	KEYWORD2
+getError	KEYWORD2
+dumpDebugOutput	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################

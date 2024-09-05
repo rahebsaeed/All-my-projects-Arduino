@@ -1,0 +1,27 @@
+<!-- BEGIN NAV -->
+<nav class="nav-extended dont-print">
+    <!-- DESTKTOP MENU-->
+    <div class="nav-wrapper">
+        <a href="{{ '/' | relative_url }}" class="brand-logo right">
+            <img src="{{ '/images/3bc-logo-menu.png' | relative_url }}" width="32px" alt="3BC LOGO"/>
+        </a>
+        <a href="#" data-target="menu" class="sidenav-trigger" style="display:block">
+            <i class="material-icons">menu</i>
+        </a>
+        <div class="theme">
+            <i class="material-icons left bright">brightness_4</i> 
+        </div>
+    </div>
+</nav>
+
+<!-- BEGIN MOBILE MENU-->
+<ul class="sidenav dont-print" id="menu">
+    <li><a href="{{ '/' | relative_url }}"><i class="material-icons">home</i>Home</a></li>
+    <li><a href="{{ site.github.clone_url }}"><i class="material-icons">code</i>Source</a></li>
+    {% for page in site.pages %}
+    {% if page.title and page.path != 'index.md' %}
+    <li><a href="{{ page.url | relative_url }}"><i class="material-icons">arrow_forward</i>{{ page.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+</ul>
+<!-- END NAV -->

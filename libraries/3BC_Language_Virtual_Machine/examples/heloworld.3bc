@@ -1,0 +1,15 @@
+#!/usr/bin/env 3bc
+mode nill 0d2
+strc nill 'h'
+strc nill 'e'
+strc nill 'l'
+strc nill 'l'
+strc nill 'o'
+strc nill 0x20
+strc nill 'w'
+strc nill 'o'
+strc nill 'r'
+strc nill 'l'
+strc nill 'd'
+strc nill '!'
+strc nill 0x0A

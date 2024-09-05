@@ -1,0 +1,36 @@
+***********************************
+** Grove-AS3935 Lightning sensor **
+***********************************
+
+
+The GROVEAS3935 (Grove-AS3935 Lightning sensor) library permits an easy way to interface
+proper written code to the sensor using I2C protocol.
+This library can write to the setup registers to adjust the performance level to the
+best for the environment where is running the sensor and to download the data 
+when ready. The data can be expressed in form of a graph or in text based output.
+
+
+For more information about this library please visit us at
+https://www.arduino.cc/reference/en/libraries/ 
+
+************************
+*** License terms ******
+************************
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed to  be useful and easy to use and
+WITHOUT ANY WARRANTY because implies it is applied in a more complex system
+with his own running code and hardware. See the  GNU General Public License for 
+more details.
+
+For a copy of the GNU General Public License
+visit  <http://www.gnu.org/licenses/>.
+
+-----------------------------------------------------------------------------
+Please open and read the README.MD file in this repository for more detailed
+features on this project.
+-----------------------------------------------------------------------------

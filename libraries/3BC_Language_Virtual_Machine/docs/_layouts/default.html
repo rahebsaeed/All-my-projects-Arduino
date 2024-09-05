@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ site.locale }}">
+    <head>
+        {% include head.rhtml%}
+    </head>
+    <body>
+        {% include nav.rhtml %}
+        <!-- CONTENT -->
+        <main class="container" style="margin: 10px auto;max-width: 800px; text-align: center;">
+            {{ content }}
+        </main>
+    </body>
+    <!-- HIGHLIGHT JS -->
+    <script>hljs.highlightAll();</script>
+</html>

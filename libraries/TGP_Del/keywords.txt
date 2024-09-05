@@ -1,0 +1,30 @@
+#######################################
+# Syntax Coloring Map for TGP DEL
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Del	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+
+refresh	KEYWORD2
+on	KEYWORD2
+off	KEYWORD2
+set	KEYWORD2
+get	KEYWORD2
+setBlinking	KEYWORD2
+getBlinking	KEYWORD2
+setBlinkingInterval	KEYWORD2
+getBlinkingInterval	KEYWORD2
+setBrightness	KEYWORD2
+getBrightness	KEYWORD2
+
+######################################
+# Constants (LITERAL1)
+#######################################
