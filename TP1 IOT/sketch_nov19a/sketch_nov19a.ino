@@ -8,7 +8,7 @@
 unsigned long myChannelNumber =2344288;
 const char * mywriteAPIKey = "4DG2GI2GBS426C9W"; // Define ThingSpeak channel number and write API key
 const chart ssid = "NOUVEAU";
-const char* password = "fatimachniouel"; // Define WiFi network credentials
+const char* password = "00000000000000"; // Define WiFi network credentials
 DHT dht (DHTPIN, DHTTYPE) :
 void setupo {
 Serial. begin (9600) :
