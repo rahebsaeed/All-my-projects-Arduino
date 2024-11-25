@@ -7,7 +7,7 @@
  ** MOSI - pin 11
  ** MISO - pin 12
  ** CLK - pin 13
- ** CS - pin 4 (for MKRZero SD: SDCARD_SS_PIN)
+ ** CS - pin 4
 
   created   Nov 2010
   by David A. Mellis
@@ -25,17 +25,13 @@ File myFile;
 
 void setup() {
   // Open serial communications and wait for port to open:
-  Serial.begin(9600);
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-  }
-
+  Serial.begin(115200);
 
   Serial.print("Initializing SD card...");
 
   if (!SD.begin(4)) {
     Serial.println("initialization failed!");
-    while (1);
+    return;
   }
   Serial.println("initialization done.");
 
@@ -61,9 +57,7 @@ void setup() {
     Serial.println("test.txt:");
 
     // read from the file until there's nothing else in it:
-    while (myFile.available()) {
-      Serial.write(myFile.read());
-    }
+    while (myFile.available()) { Serial.write(myFile.read()); }
     // close the file:
     myFile.close();
   } else {
@@ -75,5 +69,3 @@ void setup() {
 void loop() {
   // nothing happens after setup
 }
-
-

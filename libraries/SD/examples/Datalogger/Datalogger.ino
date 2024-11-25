@@ -10,7 +10,7 @@
  ** MOSI - pin 11
  ** MISO - pin 12
  ** CLK - pin 13
- ** CS - pin 4 (for MKRZero SD: SDCARD_SS_PIN)
+ ** CS - pin 4
 
   created  24 Nov 2010
   modified 9 Apr 2012
@@ -27,11 +27,7 @@ const int chipSelect = 4;
 
 void setup() {
   // Open serial communications and wait for port to open:
-  Serial.begin(9600);
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-  }
-
+  Serial.begin(115200);
 
   Serial.print("Initializing SD card...");
 
@@ -39,7 +35,7 @@ void setup() {
   if (!SD.begin(chipSelect)) {
     Serial.println("Card failed, or not present");
     // don't do anything more:
-    while (1);
+    return;
   }
   Serial.println("card initialized.");
 }
@@ -52,9 +48,7 @@ void loop() {
   for (int analogPin = 0; analogPin < 3; analogPin++) {
     int sensor = analogRead(analogPin);
     dataString += String(sensor);
-    if (analogPin < 2) {
-      dataString += ",";
-    }
+    if (analogPin < 2) { dataString += ","; }
   }
 
   // open the file. note that only one file can be open at a time,
@@ -69,16 +63,5 @@ void loop() {
     Serial.println(dataString);
   }
   // if the file isn't open, pop up an error:
-  else {
-    Serial.println("error opening datalog.txt");
-  }
+  else { Serial.println("error opening datalog.txt"); }
 }
-
-
-
-
-
-
-
-
-
