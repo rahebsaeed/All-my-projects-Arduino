@@ -5,19 +5,19 @@
 
 // Pin and DHT configuration
 #define DHTPIN 4
-#define DHTTYPE DHT22
-#define LEDPIN 12  // Pin for controlling the LED
+#define DHTTYPE DHT11
+#define LEDPIN 13  // Pin for controlling the LED
 
 // ThingSpeak credentials
 unsigned long myChannelNumber = 2755011;
 const char* myWriteAPIKey = "HOJP1764PT1SCX7F";
 
 // WiFi credentials
-const char* ssid = "Wokwi-GUEST";
-const char* password = "";
+const char* ssid = "mywifi";
+const char* password = "87654321";
 
 // MQTT server and topics
-const char* mqtt_server = "test.mosquitto.org";
+const char* mqtt_server = "192.168.43.173";
 const char* topic_humidity = "dht22/humidity";
 const char* topic_temperature = "dht22/temperature";
 const char* topic_led = "dht22sensor/ledpin12";
@@ -46,9 +46,11 @@ void callback(char* topic, byte* payload, unsigned int length) {
     if (data == "true") {
       digitalWrite(LEDPIN, HIGH);  // Turn on LED
       Serial.println("LED turned ON");
+      ThingSpeak.setField(3, 1);
     } else if (data == "false") {
       digitalWrite(LEDPIN, LOW);  // Turn off LED
       Serial.println("LED turned OFF");
+      ThingSpeak.setField(3, 0);
     }
   } 
   // Handle refresh message
