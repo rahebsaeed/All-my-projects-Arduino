@@ -54,6 +54,8 @@ This project demonstrates how to use the RAK811 module in **LoRa P2P** mode to s
 
 The code initializes the RAK811 module and sets it to **LoRa P2P** mode. Below are the configurable parameters:
   You will find all commands for configuration RAK811 in this file text [Configuration LoRa RAK811](https://github.com/rahebsaeed/All-my-projects-Arduino/blob/main/configuration%20loard%20rak811.txt).
+  And you need to download RAK port tool for configure RAK811 [RAK_SERIAL_PORT TOOL](https://downloads.rakwireless.com/LoRa/RAK811/Tools/RAK_SERIAL_PORT_TOOL_V1.2.1.zip).
+  
 - **Frequency**: `869525000` Hz  
 - **Spreading Factor**: `12`  
 - **Bandwidth**: `0` (125 kHz)  
@@ -84,3 +86,6 @@ String asciiToHex(String ascii) {
     return hex;
 }
 ```
+## Related 
+
+ [LoRa Module RAK811 with Arduino as Receiver](https://github.com/rahebsaeed/All-my-projects-Arduino/tree/main/LoRa_receiver).
