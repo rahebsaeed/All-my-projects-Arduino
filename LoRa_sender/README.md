@@ -67,25 +67,6 @@ You can modify these parameters in the code under the `rk_initP2P` function.
 
 ---
 
-## Code Explanation
-
-### ASCII to Hex Conversion
-The `asciiToHex` function converts a string of ASCII characters into a hexadecimal representation for transmission:
-
-```
-String asciiToHex(String ascii) {
-    String hex = "";
-    for (int i = 0; i < ascii.length(); i++) {
-        char c = ascii[i];
-        if (c < 16) {
-            hex += "0";
-        }
-        hex += String(c, HEX);
-    }
-    hex.toUpperCase();
-    return hex;
-}
-```
 ## Related 
 
  [LoRa Module RAK811 with Arduino as Receiver](https://github.com/rahebsaeed/All-my-projects-Arduino/tree/main/LoRa_receiver).
