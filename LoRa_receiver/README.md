@@ -1,5 +1,4 @@
 # LoRa Module RAK811 with Arduino as Receiver
-# LoRa Module RAK811 with Arduino as Receiver
 
 This project demonstrates how to use the RAK811 module in **LoRa P2P** mode to receive data. The code configures the RAK811 module, extracts hexadecimal data from the received payload, converts it back to ASCII text, and displays the decoded information.
 
