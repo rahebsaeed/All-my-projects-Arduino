@@ -19,7 +19,7 @@ This project demonstrates how to use the RAK811 module in **LoRa P2P** mode to s
 - Jumper wires and breadboard.
 
 ### Libraries
-1. [`RAK811`](https://github.com/RAKWireless/RAK811-Arduino):
+1. [`RAK811`](https://github.com/RAKWireless/WisNode-Arduino-Library):
    - Used for interfacing with the RAK811 module.
 2. **SoftwareSerial**:
    - To handle serial communication with the module.
