@@ -1,16 +1,13 @@
 #include "DHT.h"
 #include "WiFi.h"
 #include <PubSubClient.h>
-#include "ThingSpeak.h"
 
 // Pin and DHT configuration
 #define DHTPIN 4
 #define DHTTYPE DHT11
 #define LEDPIN 13  // Pin for controlling the LED
 
-// ThingSpeak credentials
-unsigned long myChannelNumber = 2755011;
-const char* myWriteAPIKey = "HOJP1764PT1SCX7F";
+
 
 // WiFi credentials
 const char* ssid = "mywifi";
@@ -93,8 +90,7 @@ void setup() {
   Serial.println(" connected!");
   Serial.println("Local IP: " + WiFi.localIP().toString());
 
-  // Initialize MQTT and ThingSpeak
-  ThingSpeak.begin(espClient);
+  // Initialize MQTT
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
 }
@@ -132,10 +128,7 @@ void loop() {
     client.publish(topic_humidity, humidity_str);
     client.publish(topic_temperature, temperature_str);
 
-    // Send data to ThingSpeak
-    ThingSpeak.setField(1, humidity);
-    ThingSpeak.setField(2, temperature);
-    int response = ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey);
+
 
     // Print debug info
     Serial.print("Humidity: ");
@@ -144,10 +137,5 @@ void loop() {
     Serial.print(temperature);
     Serial.println("°C");
 
-    if (response == 200) {
-      Serial.println("ThingSpeak update successful.");
-    } else {
-      Serial.println("ThingSpeak update failed. Code: " + String(response));
-    }
   }
 }
