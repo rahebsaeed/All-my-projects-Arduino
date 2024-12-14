@@ -19,7 +19,7 @@ This project demonstrates how to use the RAK811 module in **LoRa P2P** mode to s
 - Jumper wires and breadboard.
 
 ### Libraries
-1. [`RAK811`](https://github.com/RAKWireless/WisNode-Arduino-Library):
+1. [RAK811](https://github.com/RAKWireless/WisNode-Arduino-Library):
    - Used for interfacing with the RAK811 module.
 2. **SoftwareSerial**:
    - To handle serial communication with the module.
@@ -53,7 +53,7 @@ This project demonstrates how to use the RAK811 module in **LoRa P2P** mode to s
 ## Configuration
 
 The code initializes the RAK811 module and sets it to **LoRa P2P** mode. Below are the configurable parameters:
-  You will find all commands for configuration RAK811 in this file text [Configuration LoRa RAK811]([https://www.arduino.cc/en/software](https://github.com/rahebsaeed/All-my-projects-Arduino/blob/main/configuration%20loard%20rak811.txt)).
+  You will find all commands for configuration RAK811 in this file text [Configuration LoRa RAK811]([https://www.arduino.cc/en/software](https://github.com/rahebsaeed/All-my-projects-Arduino/blob/main/configuration%20loard%20rak811.txt).
 - **Frequency**: `869525000` Hz  
 - **Spreading Factor**: `12`  
 - **Bandwidth**: `0` (125 kHz)  
