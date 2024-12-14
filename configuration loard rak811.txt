@@ -1,0 +1,71 @@
+###########################
+configuration sender
+
+Set to Peer-to-Peer Mode:
+at+set_config=lora:work_mode:1
+
+Set Frequency (same for both sender and receiver):
+
+at+set_config=lorap2p:<frequency>:<spreadfact>:<bandwidth>:<codingrate>:<preamlen>:<power>
+
+Example for EU868:
+at+set_config=lorap2p:869525000:12:0:1:8:20
+
+Frequency: 869525000 (Frequency in Hz — for 869.525 MHz)
+Spread Factor (SF): 12 (A higher value gives better range but reduces data rate)
+Bandwidth: 0 (125 kHz bandwidth, common for LoRa)
+Coding Rate: 1 (4/5 coding rate)
+Preamble Length: 8 (Length of the preamble, typical value)
+Power: 20 (TX power in dBm — can be adjusted based on distance and regulation)
+
+##
+Set transfer mode to sender
+at+set_config=lorap2p:transfer_mode:2  
+
+
+Send Data: Use the command to send data:
+
+at+send=lorap2p:<hex_data>
+
+Example:
+at+send=lorap2p:48656C6C6F
+
+#############################
+configuration receiver
+
+Set to Peer-to-Peer Mode:
+
+at+set_config=lora:work_mode:1
+
+Set Frequency (must match the sender):
+
+at+set_config=lorap2p:<frequency>:<spreadfact>:<bandwidth>:<codingrate>:<preamlen>:<power>
+
+example:
+at+set_config=lorap2p:869525000:12:0:1:8:20
+
+869525000: Frequency in Hz (869.525 MHz in this case).
+12: Spread factor (higher value gives better range but reduces data rate).
+0: Bandwidth (125 kHz bandwidth).
+1: Coding rate (4/5 coding rate).
+8: Preamble length (typical value).
+20: Transmission power in dBm.
+Enable Continuous Reception:
+
+###
+Enable continuous reception mode
+at+set_config=lorap2p:transfer_mode:1
+
+
+
+Monitor Received Data: When the sender transmits, the receiver will output the received message in the terminal:
+
++RCV=<hex_data>,RSSI:<rssi>,SNR:<snr>
+
+
+Example:
++RCV=48656C6C6F,RSSI:-45,SNR:10
+
+48656C6C6F: The received data in hexadecimal.
+RSSI: Signal strength.
+SNR: Signal-to-noise ratio.
