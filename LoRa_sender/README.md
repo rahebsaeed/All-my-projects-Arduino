@@ -19,7 +19,7 @@ This project demonstrates how to use the RAK811 module in **LoRa P2P** mode to s
 - Jumper wires and breadboard.
 
 ### Libraries
-1. [`RAK811`](https://github.com/RAKWireless/RAK811-Arduino):
+1. [RAK811](https://github.com/RAKWireless/WisNode-Arduino-Library):
    - Used for interfacing with the RAK811 module.
 2. **SoftwareSerial**:
    - To handle serial communication with the module.
@@ -53,7 +53,9 @@ This project demonstrates how to use the RAK811 module in **LoRa P2P** mode to s
 ## Configuration
 
 The code initializes the RAK811 module and sets it to **LoRa P2P** mode. Below are the configurable parameters:
-
+  You will find all commands for configuration RAK811 in this file text [Configuration LoRa RAK811](https://github.com/rahebsaeed/All-my-projects-Arduino/blob/main/configuration%20loard%20rak811.txt).
+  And you need to download RAK port tool for configure RAK811 [RAK_SERIAL_PORT TOOL](https://downloads.rakwireless.com/LoRa/RAK811/Tools/RAK_SERIAL_PORT_TOOL_V1.2.1.zip).
+  
 - **Frequency**: `869525000` Hz  
 - **Spreading Factor**: `12`  
 - **Bandwidth**: `0` (125 kHz)  
@@ -65,8 +67,9 @@ You can modify these parameters in the code under the `rk_initP2P` function.
 
 ---
 
-## Code Explanation
+## Related 
 
+<<<<<<< HEAD
 ### ASCII to Hex Conversion
 The `asciiToHex` function converts a string of ASCII characters into a hexadecimal representation for transmission:
 
@@ -84,3 +87,6 @@ String asciiToHex(String ascii) {
     return hex;
 }
 ```
+=======
+ [LoRa Module RAK811 with Arduino as Receiver](https://github.com/rahebsaeed/All-my-projects-Arduino/tree/main/LoRa_receiver).
+>>>>>>> 9ca858eea95b8459a0a0950e93bba3cc93c91527
