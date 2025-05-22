@@ -26,7 +26,7 @@ void setup() {
 
   DebugSerial.println(F("Start init LoRaP2P parameters..."));
   
-  if (!RAKLoRa.rk_initP2P("869525000", 12, 0, 1, 8, 20)) {
+  if (!RAKLoRa.rk_initP2P("869525000", 7, 1, 1, 8, 20)) {
     DebugSerial.println(F("Init error, please reset module."));
     while (1);
   } else {
@@ -49,8 +49,10 @@ void loop() {
 
     String receivedData = hexToStr(hex);  // Convert hex to ASCII string
     DebugSerial.println("Decoded String: " + receivedData);
+    delay(2000);
   } else {
     DebugSerial.println("No data received.");
+    delay(2000);
   }
 }
 

@@ -107,7 +107,7 @@ void wspeedIRQ()
 
 void setup()
 {
-    Serial.begin(9600);
+    Serial.begin(115400);
     Serial.println("projet station meteo");
 
     pinMode(STAT1, OUTPUT); //Status LED Blue

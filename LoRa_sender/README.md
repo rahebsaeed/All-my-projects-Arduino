@@ -82,4 +82,5 @@ String asciiToHex(String ascii) {
     }
     hex.toUpperCase();
     return hex;
-}```
+}
+```

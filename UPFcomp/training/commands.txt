@@ -1,0 +1,9 @@
+
+git clone https://github.com/ultralytics/yolov5
+cd yolov5
+pip install -r requirements.txt
+
+
+
+wget https://github.com/ultralytics/yolov5/releases/download/v6.0/yolov5s.pt
+

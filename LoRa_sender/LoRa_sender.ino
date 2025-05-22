@@ -43,7 +43,7 @@ void setup() {
 
   DebugSerial.println(F("Start init LoRaP2P parameters..."));
 
-  if (!RAKLoRa.rk_initP2P("869525000", 12, 0, 1, 8, 20)) {
+  if (!RAKLoRa.rk_initP2P("869525000", 7, 1, 1, 8, 20)) {
     DebugSerial.println(F("Init error, please reset module."));
     while (1);
   } else {
@@ -61,9 +61,11 @@ void loop() {
   if (RAKLoRa.rk_sendP2PData(hexBuffer)) {
     DebugSerial.print("Data Sent: ");
     DebugSerial.println(hexBuffer);
+    
   } else {
     DebugSerial.println("Send failed.");
   }
-  
-  delay(10000);  // Send every 10 seconds for testing
+  delay(30000);  // Send every 30 seconds for testing
+
 }
+
