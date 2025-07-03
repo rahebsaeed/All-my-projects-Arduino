@@ -41,7 +41,7 @@ except Exception as e:
     serial_connected = False
 
 # ===== MODEL LOADING =====
-MODELS_DIR = os.path.expanduser("~/Documents")
+MODELS_DIR = os.path.expanduser("~D:\Arduino\UPFcomp\training")
 traffic_model_path = os.path.join(MODELS_DIR, "traficDetectionv8.pt")
 cube_model_path = os.path.join(MODELS_DIR, "cubeDetection8.pt")
 
