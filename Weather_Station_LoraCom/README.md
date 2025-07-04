@@ -34,7 +34,6 @@ This project implements a LoRaWAN-connected weather station designed to monitor 
 | MQTT Broker | Mosquitto | Data distribution |
 
 ![Circuit Diagram](circuit.png)
-![RAK811 Module](rak811-evb.png)
 
 ## Software Architecture
 
@@ -56,7 +55,8 @@ This project implements a LoRaWAN-connected weather station designed to monitor 
 
 5. **Data Visualization**
    - Dashboard integration (Node-RED, Mobile app )
-    ![Mobile App](img/WhatsApp Image 2025-06-20 at 18.23.34_36865ab9.jpg)
+![Project Banner](img/WhatsApp%20Image%202025-06-20%20at%2018.23.34_36865ab9.jpg)
+
 ## Installation & Setup
 
 ### Hardware Setup
