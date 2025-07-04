@@ -56,7 +56,7 @@ This project implements a LoRaWAN-connected weather station designed to monitor 
 
 5. **Data Visualization**
    - Dashboard integration (Node-RED, Mobile app )
-![Mobile App](img/WhatsApp Image 2025-06-20 at 18.23.34_36865ab9.jpg)
+    ![Mobile App](img/WhatsApp Image 2025-06-20 at 18.23.34_36865ab9.jpg)
 ## Installation & Setup
 
 ### Hardware Setup
